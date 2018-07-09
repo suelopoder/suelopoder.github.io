@@ -1,1 +1,157 @@
-Hello World
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Jime y Diego</title>
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Parisienne|Roboto" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <header>
+      <div class="inner-header">
+        <h1>¡Nos casamos!</h1>
+        <span class="date">~ 8/12/2018 ~</span>
+        <h2>Jime y Diego</h2>
+      </div>
+    </header>
+    <main>
+      <section class="fecha">
+        <h2>¡Reservate la fecha!</h2>
+        <p>Queremos contar con tu presencia en nuestra noche tan especial</p>
+        <ul class="photos">
+          <li>
+            <div class="polaroid" style="transform: rotate(-3deg)">
+              <div class=pin><img src="./pin.png" /></div>
+              <img src="./italy.jpg" style="transform: rotate(180deg);" />
+              <div class="photo-text">
+                <p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  Sábado 8 de diciembre 2018
+                </p>
+                <p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  19 horas <i>puntual</i>
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="polaroid" style="transform: rotate(3deg)">
+              <div class=pin><img src="./pin.png" /></div>
+              <img src="./coliseo.jpg" style="transform: rotate(180deg);" />
+              <div class="photo-text">
+                <p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <a href="https://goo.gl/maps/cGamusH9uwy">Quinta El Amanecer</a>
+                  <br />
+                  Emilio Mitre 2190 - Canning - Ezeiza
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>  
+      </section>
+
+      <section class="regalo">
+        <h2>Regalo</h2>
+        <div>
+          <span class="strike">Sin regalo no entrás</span>
+          <span>Lo importante es tu presencia, pero si querés ayudarnos con nuestra luna de miel podés hacerlo con un depósito o transferencia.</span>
+        </div>
+        <div>
+          <div class="datos-options">
+            <input name="datos" value="datos-bank" id="datos-bank" type="radio" onclick="javascript:handleTransferButton('bank')" />
+            <label for="datos-bank">Datos bancarios</label>
+            <input name="datos" value="datos-btc" id="datos-btc" type="radio" onclick="javascript:handleTransferButton('btc')" />
+            <label for="datos-btc">Bitcoin</label>
+          </div>
+          <div class="transfer-options">
+            <div id="transferencia" class="hidden">
+              <h3>Banco Santander Rio</h3>
+              <div class="row">
+                <div>Número de cuenta</div>
+                <div>403-352653/8</div>
+              </div>
+              <div class="row">
+                <div>CBU</div>
+                <div>0720403088000035265386</div>
+              </div>
+              <div class="row">
+                <div>Alias</div>
+                <div>diegosisto</div>
+              </div>
+              <div class="row">
+                <div>Nombre</div>
+                <div>Diego Nicolas Sisto</div>
+              </div>
+              <div class="row">
+                <div>CUIL/CUIT</div>
+                <div>20-31423851-7</div>
+              </div>
+            </div>
+            <div id="bitcoin" class="hidden">
+              <p>
+                <img
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=3CVhJo5q9U3aqtxBWaGGhc4HuR9PbfyNLV"
+                />
+              </p>
+              <small>3CVhJo5q9U3aqtxBWaGGhc4HuR9PbfyNLV</small>
+              <p>Powered by Xapo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="confirmar">
+        <h2>¡Te esperamos!</h2>
+        <form action="mailto:jimenagomez.87@gmail.com?subject=Voy al casamiento&body=Hola!\nLes confirmo mi asistencia al casamiento.">
+          <button type="submit">
+            <h3>Confirmar asistencia</h3>
+          </button>
+        </form>
+      </section>
+    </main>
+    <script type="text/javascript">
+      var TRANSFER_STATE = {
+        bank: false,
+        btc: false,
+      }
+      
+      function handleTransferButton(button) {
+        if (button === 'bank') {
+          TRANSFER_STATE.bank = !TRANSFER_STATE.bank;
+          TRANSFER_STATE.btc = false;
+        }
+        else if (button === 'btc') {
+          TRANSFER_STATE.btc = !TRANSFER_STATE.btc;
+          TRANSFER_STATE.bank = false;
+        }
+        else {
+          TRANSFER_STATE.bank = false;
+          TRANSFER_STATE.btc = false;
+        }
+
+        updateTransfer();
+      }
+
+      function updateTransfer() {
+        var bankElem = document.getElementById('transferencia');
+        if (TRANSFER_STATE.bank && bankElem.classList.contains('hidden')) {
+          bankElem.classList.remove('hidden');
+        }
+        if (!TRANSFER_STATE.bank && !bankElem.classList.contains('hidden')) {
+          bankElem.classList.add('hidden');
+        }
+
+        var btcElem = document.getElementById('bitcoin');
+        if (TRANSFER_STATE.btc && btcElem.classList.contains('hidden')) {
+          btcElem.classList.remove('hidden');
+        }
+        if (!TRANSFER_STATE.btc && !btcElem.classList.contains('hidden')) {
+          btcElem.classList.add('hidden');
+        }
+      }
+    </script>
+  </body>
+</html>
