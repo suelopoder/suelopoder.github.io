@@ -171,13 +171,20 @@ h2 {
 }
 .regalo .datos-options label {
   border: 1px solid black;
-  background-color: lightgray;
+  box-shadow: 1px 1px black;
+  background-color: #007f00;
+  color: white;
+  border-radius: 10px;
   padding: 0.8em;
   font-size: 1.25em;
 }
+.regalo .datos-options label:hover {
+  background-color: #049a04;
+}
 .regalo .datos-options input[type="radio"]:checked+label {
-  background-color: white;
+  background-color: #005000;
   transition: all ease 0.3s;
+  box-shadow: -1px -1px black;
 }
 
 @keyframes fadein {
