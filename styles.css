@@ -21,6 +21,23 @@ header {
   color: white;
 }
 
+.parallax {
+  background-image: url("./jardin.jpg");
+  background-attachment: fixed;
+  background-position: center 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  .parallax {
+    background-position: center top;
+    height: 200px;
+    background-size: 100%;
+  }
+}
+
 .inner-header {
   margin: auto;
   position: relative;
