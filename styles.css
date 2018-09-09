@@ -202,6 +202,11 @@ h2 {
 .regalo .opciones {
   padding: 2em;
 }
+@media only screen and (max-width: 600px) {
+  .regalo .opciones {
+    padding: 0;
+  }
+}
 .regalo .datos-options {
   text-align: center;
   height: 3em;
@@ -211,7 +216,7 @@ h2 {
 }
 @media only screen and (max-width: 600px) {
   .regalo .datos-options label {
-    font-size: 0.875em;
+    font-size: 0.55em;
   }
 }
 .regalo .datos-options input[type="radio"]:checked+label {
@@ -242,6 +247,7 @@ h2 {
 }
 .regalo #transferencia .row div:nth-child(1) {
   text-align: right;
+  word-break: break-word;
 }
 .regalo #transferencia .row div:nth-child(2) {
   text-align: left;
