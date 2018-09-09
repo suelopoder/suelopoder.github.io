@@ -4,30 +4,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Jime y Diego</title>
-    <link href="https://fonts.googleapis.com/css?family=Handlee|Parisienne|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Parisienne|Roboto|Courgette" rel="stylesheet">
     <link href="./styles.css" rel="stylesheet"></link>
   </head>
   <body>
     <header class="parallax">
     </header>
     <main>
-      <div class="section" style="text-align: center; margin: 1em">
-        <h1>¡Nos casamos!</h1>
-        <span class="date">~ 08/12/2018 ~</span>
-        <h2>Jime y Diego</h2>
+      <div class="section" style="text-align: center; margin: 1em; font-size: 1.5em">
+        <h1 style="font-family: Courgette">¡Nos casamos!</h1>
+        <p style="margin:0;font-family: Handlee">
+          <span class="date">~ 08/12/2018 ~</span>
+          <h2>Jime y Diego</h2>
+        </p>
       </div>
       <section class="fecha">
         <h2>¡Reservate la fecha!</h2>
-        <p>Después de muchos años juntos tomamos la decisión de casarnos y vamos a festejarlo con todo! Para que la noche sea inolvidable queremos contar con tu presencia, asi que agendate la fecha y chequea toda la info descripta mas abajo :)</p>
+        <p>Después de muchos años juntos tomamos la decisión de casarnos y vamos a festejarlo con todo! Para que la noche sea inolvidable queremos contar con tu presencia, así que agendate la fecha y chequeá toda la info descripta más abajo.</p>
+        <p>
+          <b>⏰ ¿Cuándo?</b>
+          <br />
+          <span style="font-style: italic">El sábado 8 de diciembre 18:30 horas puntual 🙏</span>
+        </p>
+        <p>
+          <b>📍 ¿Dónde?</b>
+          <br />
+          <span style="font-style: italic"><a href="https://goo.gl/maps/cGamusH9uwy">Quinta El Amanecer</a> - Emilio Mitre 2190 - Canning - Ezeiza</span>
+        </p>
         <ul class="photos">
           <li>
             <div class="polaroid" style="transform: rotate(-3deg)">
               <div class=pin><img src="./pin.png" /></div>
-              <img src="./IMG_9698.JPG" />
+              <img src="./felices.png" />
               <div class="photo-text">
                 <p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  Sábado 8 de diciembre 2018
+                  😄 Así de felices tienen que venir 😄
                 </p>
               </div>
             </div>
@@ -38,8 +49,7 @@
               <img src="./coliseo.jpg" style="transform: rotate(180deg);" />
               <div class="photo-text">
                 <p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  18:30 horas <i>puntual</i>
+                  Conociendo el coliseo romano 😮
                 </p>
               </div>
             </div>
@@ -50,10 +60,7 @@
               <img src="./barca.jpg" />
               <div class="photo-text">
                 <p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  <a href="https://goo.gl/maps/cGamusH9uwy">Quinta El Amanecer</a>
-                  <br />
-                  Emilio Mitre 2190 - Canning - Ezeiza
+                  Cuando visitamos el estadio del Barça ⚽
                 </p>
               </div>
             </div>
@@ -62,63 +69,61 @@
       </section>
 
       <section class="regalo">
-        <h2>Regalo</h2>
-        <div>
-          <span>Si querés ayudarnos con nuestra luna de miel podés hacerlo con un depósito o transferencia. </span>
-        </div>
+        <h2>🎁 Regalo</h2>
+        <p>Si querés ayudarnos con nuestra luna de miel podés hacerlo con un depósito o transferencia bancaria.</p>
         <div class="opciones">
           <div class="datos-options">
             <input name="datos" value="datos-bank" id="datos-bank" type="radio" onclick="javascript:handleTransferButton('bank')" />
-            <label for="datos-bank">Datos bancarios</label>
+            <label class="btn" for="datos-bank">Datos bancarios</label>
             <input name="datos" value="datos-btc" id="datos-btc" type="radio" onclick="javascript:handleTransferButton('btc')" />
-            <label for="datos-btc">Bitcoin</label>
+            <label class="btn" for="datos-btc">Bitcoin</label>
           </div>
-          <div class="transfer-options">
-            <div id="transferencia" class="hidden">
-              <h3>Banco Santander Rio</h3>
-              <div class="row">
-                <div>Número de cuenta</div>
-                <div>403-352653/8</div>
-              </div>
-              <div class="row">
-                <div>CBU</div>
-                <div>0720403088000035265386</div>
-              </div>
-              <div class="row">
-                <div>Alias</div>
-                <div>diegosisto</div>
-              </div>
-              <div class="row">
-                <div>Nombre</div>
-                <div>Diego Nicolas Sisto</div>
-              </div>
-              <div class="row">
-                <div>CUIL/CUIT</div>
-                <div>20-31423851-7</div>
-              </div>
+        </div>
+        <div class="transfer-options">
+          <div id="transferencia" class="hidden">
+            <h3>Banco Santander Rio</h3>
+            <div class="row">
+              <div>Número de cuenta</div>
+              <div>403-352653/8</div>
             </div>
-            <div id="bitcoin" class="hidden">
-              <p>
-                <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=3CVhJo5q9U3aqtxBWaGGhc4HuR9PbfyNLV"
-                />
-              </p>
-              <small>3CVhJo5q9U3aqtxBWaGGhc4HuR9PbfyNLV</small>
-              <p>Powered by Xapo</p>
+            <div class="row">
+              <div>CBU</div>
+              <div>0720403088000035265386</div>
             </div>
+            <div class="row">
+              <div>Alias</div>
+              <div>diegosisto</div>
+            </div>
+            <div class="row">
+              <div>Nombre</div>
+              <div>Diego Nicolas Sisto</div>
+            </div>
+            <div class="row">
+              <div>CUIL/CUIT</div>
+              <div>20-31423851-7</div>
+            </div>
+          </div>
+          <div id="bitcoin" class="hidden">
+            <p>
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=3CVhJo5q9U3aqtxBWaGGhc4HuR9PbfyNLV"
+              />
+            </p>
+            <small>3CVhJo5q9U3aqtxBWaGGhc4HuR9PbfyNLV</small>
+            <p>Powered by Xapo</p>
           </div>
         </div>
       </section>
 
       <section class="confirmar">
-        <h2>¡Te esperamos!</h2>
+        <p>Antes de irte por favor no te olvides de avisarnos si venís</p>
         <form action="mailto:jimenagomez.87@gmail.com?subject=Voy al casamiento&body=Hola!\nLes confirmo mi asistencia al casamiento.">
-          <button type="submit">
-            <h3>Confirmar asistencia</h3>
-          </button>
+          <button type="submit" class="btn">Confirmar asistencia</button>
         </form>
+        <h2>¡Te esperamos!</h2>
       </section>
     </main>
+
     <script type="text/javascript">
       var TRANSFER_STATE = {
         bank: false,
