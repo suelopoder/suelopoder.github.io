@@ -1,169 +1,166 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Jime y Diego</title>
-    <link href="https://fonts.googleapis.com/css?family=Handlee|Parisienne|Roboto|Courgette" rel="stylesheet">
-    <link href="./styles.css" rel="stylesheet"></link>
+    <meta charset="UTF-8">
+    <title>Diego Sisto</title>
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="parallax">
-    </header>
-    <main>
-      <div class="section" style="text-align: center; margin: 1em; font-size: 1.5em">
-        <h1 style="font-family: Courgette">¡Nos casamos!</h1>
-        <p style="margin:0;font-family: Handlee">
-          <span class="date">~ 08/12/2018 ~</span>
-          <h2>Jime y Diego</h2>
-        </p>
+    <header>
+      <div>
+        <img src="./me.jpeg" alt="Diego Sisto pic">
       </div>
-      <section class="fecha">
-        <h2>¡Reservate la fecha!</h2>
-        <p>Después de muchos años juntos tomamos la decisión de casarnos y vamos a festejarlo con todo! Para que la noche sea inolvidable queremos contar con tu presencia, así que agendate la fecha y chequeá toda la info descripta más abajo.</p>
-        <p>
-          <b>⏰ ¿Cuándo?</b>
-          <br />
-          <span style="font-style: italic">El sábado 8 de diciembre 18:30 horas puntual 🙏</span>
-        </p>
-        <p>
-          <b>📍 ¿Dónde?</b>
-          <br />
-          <span style="font-style: italic"><a href="https://goo.gl/maps/cGamusH9uwy">Quinta El Amanecer</a> - Emilio Mitre 2190 - Canning - Ezeiza</span>
-        </p>
-        <ul class="photos">
-          <li>
-            <div class="polaroid" style="transform: rotate(-3deg)">
-              <div class=pin><img src="./pin.png" /></div>
-              <img src="./felices.png" />
-              <div class="photo-text">
-                <p>
-                  😄 Así de felices tienen que venir 😄
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="polaroid" style="transform: rotate(3deg)">
-              <div class=pin><img src="./pin.png" /></div>
-              <img src="./coliseo 2.jpeg" />
-              <div class="photo-text">
-                <p>
-                Recuerdo de nuestras vacaciones en Roma!
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="polaroid" style="transform: rotate(-5deg)">
-              <div class=pin><img src="./pin.png" /></div>
-              <img src="./barca.jpg" />
-              <div class="photo-text">
-                <p>
-                  Cuando visitamos el estadio del Barça ⚽
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>  
-      </section>
+      <div>
+        Diego Sisto<br>
+        Frontend developer
+      </div>
+    </header>
 
-      <section class="regalo">
-        <h2>🎁 Regalo</h2>
-        <p>Si querés ayudarnos con nuestra luna de miel podés hacerlo con un depósito o transferencia bancaria.</p>
-        <div class="opciones">
-          <div class="datos-options">
-            <input name="datos" value="datos-bank" id="datos-bank" type="radio" onclick="javascript:handleTransferButton('bank')" />
-            <label class="btn" for="datos-bank">Datos bancarios</label>
-            <input name="datos" value="datos-btc" id="datos-btc" type="radio" onclick="javascript:handleTransferButton('btc')" />
-            <label class="btn" for="datos-btc">Bitcoin</label>
-          </div>
-        </div>
-        <div class="transfer-options">
-          <div id="transferencia" class="hidden">
-            <h3>Banco Santander Rio</h3>
-            <div class="row">
-              <div>Número de cuenta</div>
-              <div>403-352653/8</div>
-            </div>
-            <div class="row">
-              <div>CBU</div>
-              <div>0720403088000035265386</div>
-            </div>
-            <div class="row">
-              <div>Alias</div>
-              <div>diegosisto</div>
-            </div>
-            <div class="row">
-              <div>Nombre</div>
-              <div>Diego Nicolas Sisto</div>
-            </div>
-            <div class="row">
-              <div>CUIL/CUIT</div>
-              <div>20-31423851-7</div>
-            </div>
-          </div>
-          <div id="bitcoin" class="hidden">
-            <p>
-              <img
-                src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=3CVhJo5q9U3aqtxBWaGGhc4HuR9PbfyNLV"
-              />
-            </p>
-            <small>3CVhJo5q9U3aqtxBWaGGhc4HuR9PbfyNLV</small>
-            <p>Powered by Xapo</p>
-          </div>
-        </div>
-      </section>
+    <article id="main-data">
+      <p>My name is Diego, and I have a <b>pasion for software development</b>. I am from Argentina, land of 🧉 and <a href="./messi.jpg">Messi</a>.</p>
+      <p>I am a senior developer with over 12 year experience in software development. I have worked with multiple technologies but now I find myself confortable around Javascript and frontend. What I don't know I learn it.</p>
+      <p>I have experience as team leader and working remote. I ❤️ building teams that <b>trust each other</b> and can share their thoughts freely.</p>
+    </article>
 
-      <section class="confirmar">
-        <p>Antes de irte por favor no te olvides de avisarnos si venís</p>
-        <form action="mailto:jimenagomez.87@gmail.com?subject=Voy al casamiento&body=Hola!\nLes confirmo mi asistencia al casamiento.">
-          <button type="submit" class="btn">Confirmar asistencia</button>
-        </form>
-        <h2>¡Te esperamos!</h2>
-      </section>
-    </main>
+    <article id="tech">
+      <h2><a href="#tech">Technologies</a></h2>
+      <p>
+        Some technologies I've used for quick reference
+      </p>
+      <ul>
+        <li class="nice-tech"><a href="https://reactjs.org/">React.js</a></li>
+        <li class="nice-tech">es6</li>
+        <li class="nice-tech">Vanilla JS</li>
+        <li>webpack</li>
+        <li>npm/yarn</li>
+        <li>Node.js <small>specially with Express</small></li>
+        <li class="nice-tech"><a href="https://nextjs.org/">Next.js</a></li>
+        <li>git <small>and SVN</small></li>
+        <li>AWS <small>(S3, EC3, Cloudwatch)</small></li>
+        <li class="nice-tech"><a href="https://firebase.google.com/">Firebase</a></li>
+        <li>Bash scripting</li>
+        <li><a href="https://styled-components.com/">Styled components</a></li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SCSS</li>
+        <li>jest</li>
+        <li><a href="https://github.com/puppeteer/puppeteer">Puppeteer</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Behavior-driven_development">BDD</a></li>
+        <li class="nice-tech"><a href="https://es.redux.js.org/">React redux</a></li>
+        <li><a href="https://github.com/reduxjs/redux-thunk">redux-thunk</a></li>
+        <li><a href="https://redux-saga.js.org/">redux-saga</a></li>
+        <li><a href="https://rxjs-dev.firebaseapp.com/">RxJS</a></li>
+        <li>Figma <small></small></li>
+        <li>MySQL <small>and SQL in general</small></li>
+        <li><a href="https://www.mongodb.com/">MongoDB</a></li>
+        <li class="nice-tech">Chrome dev tools</li>
+        <li class="nice-tech">HTTP protocol</li>
+        <li>Cache busting</li>
+        <li>PHP</li>
+        <li>Jenkins CI</li>
+        <li>C#</li>
+        <li>VSCode</li>
+        <li class="nice-tech">Docker</li>
+        <li>Vim</li>
+        <li>curl</li>
+        <li>Google analytics</li>
+        <li><a href="https://sentry.io/">sentry.io</a></li>
+      </ul>
+      <p>Some topics I am really into. My degree of expertise vary between them but I think they are important.</p>
+      <ul>
+        <li class="nice-tech">Performance</li>
+        <li class="nice-tech">Security</li>
+        <li class="nice-tech">Testing <small>Unit, integration and e2e</small></li>
+        <li>Accesibility <small>or a11y</small></li>
+        <li class="nice-tech">PWAs</li>
+        <li>Continuous integration, continuous delivery</li>
+        <li>Soft skills</li>
+        <li>Human bias</li>
+        <li class="nice-tech">Agile methodologies <small>and scrum in particular</small></li>
+        <li>Talking with en users</li>
+        <li>Bitcoin</li>
+        <li>Devops</li>
+        <li>MVPs</li>
+        <li>Lean startup</li>
+      </ul>
+    </article>
 
-    <script type="text/javascript">
-      var TRANSFER_STATE = {
-        bank: false,
-        btc: false,
-      }
-      
-      function handleTransferButton(button) {
-        if (button === 'bank') {
-          TRANSFER_STATE.bank = !TRANSFER_STATE.bank;
-          TRANSFER_STATE.btc = false;
-        }
-        else if (button === 'btc') {
-          TRANSFER_STATE.btc = !TRANSFER_STATE.btc;
-          TRANSFER_STATE.bank = false;
-        }
-        else {
-          TRANSFER_STATE.bank = false;
-          TRANSFER_STATE.btc = false;
-        }
+    <article id="job-history">
+      <h2><a href="#job-history">Job history</a></h2>
+      <p>I added my most relevant jobs. For a full history <a href="https://www.linkedin.com/in/diego-sisto-a2674021/">Linkedin</a> will be better.</p>
+      <ul>
+        <li>
+          <h3><img src="./xapo.svg" alt="Xapo"></h3>
+          <p>Xapo is a bitcoin friendly fintech company.</p>
+          <p>I worked there for a little more than 5 years.</p>
+          <p>There I did a lot. I joined when the comapny was still small and stayed there until it was about 250 people. I watched it grow and acompany it with multiple projects.</p>
+          <p>web.xapo.com <small>(Sorry, account needed)</small> was the biggest most complex project I worked on. It is a single page app built with React, redux and redux-saga. It uses a large set of techs which include: Docker, Firebase, AWS, Google analytycs, sentry.io and many many more.</p>
+          <p>I bootstraped the project and later on leaded a team of up to 8 people working there and in other apps. We had 2 weeks sprints with demos and releases at end of each one. I helped build release and development processes.</p>
+          <p>We ended up handling multiple projects with different needs and technologies.</p>
+          <p>I left the company because most web projects were being shutdown. But I left with a great relationship with most of the company. If references are needed I can name everyone on my team, my bosses and even the CEO.</p>
+        </li>
+        <li>
+          <h3><img src="./kinetica.webp" alt="Kinetica Solutions"></h3>
+          <p>Kinetica Solutions was a software consulting firm.</p>
+          <p>I worked there for a little more than 4 years.</p>
+          <p>Kinetica was where I formed myself deeply as a developer. I was lucky to work with great developers. Company founders where strong believers in quality and agile methodologies.</p>
+          <p>There I started my transcition from a backend developer to a frontend one. I got to work on multiple projects from classic custom CRUDs for internal users on a retail company, to news sites widgets with millions of views per day.</p>
+          <p>In this company I moved from metored to metoree. Passed though a lot of tech and people, who molded my way of thinking.</p>
+        </li>
+      </ul>
+    </article>
 
-        updateTransfer();
-      }
+    <article id="education">
+      <h2><a href="#education">Education</a></h2>
+      <ul>
+        <li>
+          <h3>2014 - Ingeniero en informática (Software engineer)</h3>
+          <h4>Universidad de Buenos Aires, Argentina</h4>
+        </li>
+        <li>
+          <h3>2012 - Certified Scrum Master</h3>
+          <h4>Scrum alliance</h4>
+        </li>
+      </ul>
+    </article>
 
-      function updateTransfer() {
-        var bankElem = document.getElementById('transferencia');
-        if (TRANSFER_STATE.bank && bankElem.classList.contains('hidden')) {
-          bankElem.classList.remove('hidden');
-        }
-        if (!TRANSFER_STATE.bank && !bankElem.classList.contains('hidden')) {
-          bankElem.classList.add('hidden');
-        }
-
-        var btcElem = document.getElementById('bitcoin');
-        if (TRANSFER_STATE.btc && btcElem.classList.contains('hidden')) {
-          btcElem.classList.remove('hidden');
-        }
-        if (!TRANSFER_STATE.btc && !btcElem.classList.contains('hidden')) {
-          btcElem.classList.add('hidden');
-        }
-      }
-    </script>
+    <article id="reach-me">
+      <h2><a href="#reach-me">How to reach me?</a></h2>
+      <ul>
+        <li class="mail">
+          <img src="./mail.ico" alt="Mail:">
+          diegosisto84 <b>at</b> gmail <b>dot</b> com
+        </li>
+        <li class="twitter">
+          <img src="./twitter.ico" alt="twitter handle:">
+          <a href="https://github.com/suelopoder">@suelopoder</a>
+        </li>
+        <li class="linkedin">
+          <img src="./linkedin.ico" alt="github profile:">
+          <a href="https://www.linkedin.com/in/diego-sisto-a2674021/">Diego Sisto</a>
+        </li>
+        <li class="github">
+          <img src="./github.png" alt="github profile:">
+          <a href="https://github.com/suelopoder">suelopoder</a>
+        </li>
+      </ul>
+    </article>
+    <!-- <article>
+      <button>Dark mode</button>
+      <button>Light mode</button>
+    </article> -->
+    <!-- <article>
+      Out of context quotes I like:
+      - Something simple now may be better than something great tomorrow
+      - Perfection is the enemy of good
+      - Premature preformance is the root of all evil
+      - Estimations are an educated guess, but sprint goals are compromises
+      - You can only learn by doing
+      - Get out of your confort zone every now and then
+      - Responsability is never delegated
+      - Individuals and interactions over processes and tools
+    </article> -->
   </body>
 </html>

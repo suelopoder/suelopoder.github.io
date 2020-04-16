@@ -1,266 +1,102 @@
-html {
-  max-width: 100%;
-  overflow-x: hidden;
+* {
+  --primary-color: black;
+  --bg-color: rgb(220, 220, 220);
+  --bg-color-light: rgb(240, 240, 240);
+  --link-color-light: rgb(143, 32, 32);
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'EB Garamond', serif;
+}
+
+body, ul, li, ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+li {
+  list-style: none;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+ul > li {
+  line-height: 1.3rem;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+h2 a, h2 a:visited {
+  color: var(--primary-color);
+}
+h2 a:hover {
+  color: var(--link-color);
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  --link-color: var(--link-color-light);
+  color: var(--primary-color);
+  background: var(--bg-color);
+  font-size: 16px;
+  font-family: var(--primary-font);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hidden {
-  display: none;
+a, a:visited {
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 header {
-  position: relative;
-  color: white;
-}
-
-.parallax {
-  background-image: url("./jardin.jpg");
-  background-attachment: fixed;
-  background-position: center 70%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-}
-
-@media only screen and (max-width: 600px) {
-  .parallax {
-    background-position: center top;
-    height: 200px;
-    background-size: 100%;
-  }
-}
-
-.inner-header {
-  margin: auto;
-  position: relative;
+  font-size: 3rem;
+  font-weight: bold;
   text-align: center;
-  height: 400px;
-}
-
-.inner-header::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: "";
-  background-image: url('./jardin.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 70%;
-  transform: rotate(180deg);
-  height: 400px;
-  z-index: -1;
-}
-
-.inner-header h1 {
-  padding-top: 6.5em;
-  font-family: 'Handlee', cursive;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.inner-header h2 {
-  font-family: 'Parisienne', cursive;
-}
-
-.inner-header .date {
-  font-family: 'Handlee', cursive;
-  margin: 0;
-  padding: 0;
-}
-
-section {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-main {
-  width: 100%;
-  margin: auto;
-}
-
-.fecha {
-  background-color: #EEE;
-  padding: 2em;
-}
-
-h2 {
-  margin: 0;
-}
-
-.photos {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.photos li {
-  display: block;
-  margin-top: 2.5em;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-@media only screen and (max-width: 600px) {
-  .photos li {
-    width: 75%;
-  }
-}
-.photos li .polaroid {
-  background-color: white;
-  padding: 1em;
-  padding-top: 1.5em;
-  border: 1px solid black;
-  box-shadow: -3px 3px 10px black;
-  position: relative;
-}
-.photos li .polaroid > img {
-  border: 1px solid black;
-  width: 100%;
-}
-.photos li .photo-text {
-  margin-left: 1em;
-}
-@media only screen and (max-width: 600px) {
-  .photos li .photo-text {
-    font-size: 0.8em;
-  }
-}
-.photos li .polaroid .pin {
-  position: absolute;
-  width: 3em;
-  height: 2em;
-  z-index: 1;
-  top: -0.5em;
-  left: calc(50% - 1em);
-}
-.photos li .polaroid .pin > img {
-  width: 100%;
-}
-@media only screen and (max-width: 600px) {
-  .photos li .polaroid .pin > img {
-    width: 77%;
-  }
-}
-
-.confirmar {
-  position: relative;
-  height: 360px;
-  text-align: center;
-  padding-top: 0.5em;
-}
-.confirmar p {
-  margin: 0.25em;
-}
-.confirmar h2 {
-  margin: 0.5em;
-}
-.confirmar::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: "";
-  background-image: url('./cuba.jpg');
-  background-position: 69% center;
-  background-size: cover;
-  opacity: 0.5;
-  z-index: -1;
-}
-.confirmar .btn {
-  font-size: 0.875em;
-}
-
-.btn {
-  border: 1px solid black;
-  box-shadow: 1px 1px black;
-  background-color: #00627f;
-  color: white;
-  border-radius: 10px;
-  padding: 0.8em;
-  font-size: 1.25em;
-}
-.btn:hover {
-  background-color: #1a94b8;
-}
-
-.regalo {
-  padding: 2em;
-}
-.regalo .transfer-options > div{
-  transition: display 2s ease-in;
-}
-.regalo .opciones {
-  padding: 2em;
-}
-@media only screen and (max-width: 600px) {
-  .regalo .opciones {
-    padding: 0;
-  }
-}
-.regalo .datos-options {
-  text-align: center;
-  height: 3em;
-}
-.regalo .datos-options input[type="radio"] {
-  display: none;
-}
-@media only screen and (max-width: 600px) {
-  .regalo .datos-options label {
-    font-size: 0.55em;
-  }
-}
-.regalo .datos-options input[type="radio"]:checked+label {
-  background-color: #1a94b8;
-  transition: all ease 0.3s;
-  box-shadow: none;
-}
-
-.regalo .transfer-options {
-  word-break: break-all;
-}
-
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-.regalo #transferencia h3 {
-  text-align: center;
-}
-.regalo #transferencia .row {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   display: flex;
-  width: 100%;
-  animation: fadein 2s;
-}
-.regalo #transferencia .row div {
-  width: 50%;
-  padding: 0.5em;
-}
-.regalo #transferencia .row div:nth-child(1) {
-  text-align: right;
-  word-break: break-word;
-}
-.regalo #transferencia .row div:nth-child(2) {
-  text-align: left;
+  background: var(--bg-color-light);
+  clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
 }
 
-.regalo #bitcoin {
-  text-align: center;
-  animation: fadein 2s;
-}
-.regalo #bitcoin img {
-  margin-top: 1em;
+header > div {
+  flex: 1 1 auto;
 }
 
-footer {
-  margin: 1em;
+header img {
+  height: 9rem;
+  border: 10px solid var(--bg-color);
+  border-radius: 50%;
+}
+
+article {
+  padding: 1rem;
+}
+
+#main-data {
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+}
+
+.nice-tech {
+  font-size: 1.3rem;
+}
+
+#reach-me ul {
+  display: block;
+}
+
+#reach-me ul img {
+  height: 1rem;
+}
+.github img {
+  background: black;
+  clip-path: circle(43%);
+}
+
+#job-history img {
+  max-height: 3rem;
 }
