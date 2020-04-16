@@ -54,25 +54,25 @@ a, a:visited {
 header {
   font-size: 3rem;
   font-weight: bold;
-  text-align: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
   display: flex;
   background: var(--bg-color-light);
   clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
 }
-
 header > div {
   flex: 1 1 auto;
 }
-
+header div:first-child {
+  text-align: center;
+}
 header img {
   height: 9rem;
   border: 10px solid var(--bg-color);
   border-radius: 50%;
 }
 
-article {
+article, section {
   padding: 1rem;
 }
 
