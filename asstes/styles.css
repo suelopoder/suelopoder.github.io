@@ -15,6 +15,7 @@ body, ul, li, ol {
 ul, ol {
   display: flex;
   flex-flow: row wrap;
+  width: 90%;
 }
 
 li {
@@ -30,7 +31,10 @@ ul > li {
 }
 
 h2 {
-  border-bottom: 3px solid;
+  border-bottom: 2px solid;
+  font-family: var(--secondary-font);
+  padding-bottom: 5px;
+  padding-left: 5px;
 }
 h2 a, h2 a:visited {
   color: var(--primary-color);
@@ -45,8 +49,6 @@ body {
   background: var(--bg-color);
   font-size: 16px;
   font-family: var(--primary-font);
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 a, a:visited {
@@ -55,24 +57,46 @@ a, a:visited {
 }
 
 header {
-  font-size: 3rem;
   font-weight: bold;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  display: flex;
   background: var(--bg-color-light);
   clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
 }
-header > div {
-  flex: 1 1 auto;
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  margin: auto;
 }
-header div:first-child {
+.header-content div:first-child {
+  flex-grow: 1;
   text-align: center;
+}
+.header-content div:nth-child(2) {
+  flex-grow: 3;
+}
+header h1, header h2 {
+  margin: 0;
+  border: 0;
+}
+header h1 {
+  font-size: 5rem;
+}
+header h2 {
+  font-size: 3rem;;
+  text-decoration: none;
 }
 header img {
   height: 9rem;
   border: 10px solid var(--bg-color);
   border-radius: 50%;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 article, section {
@@ -81,11 +105,6 @@ article, section {
 
 #main-data {
   font-size: 1.5rem;
-  font-family: var(--secondary-font);
-}
-
-.nice-tech {
-  font-size: 1.3rem;
 }
 
 #reach-me ul {
@@ -107,8 +126,11 @@ article, section {
 #quotes {
   position: relative;
 }
-#quotes ul {
-  display: block;
+#quotes div {
+  margin-left: 2rem;
+  width: 90%;
+}
+#quotes q {
   font-style: italic;
 }
 #quotes ul li::before {
@@ -122,5 +144,5 @@ article, section {
   bottom: 0;
   right: 0;
   width: 150px;
-  opacity: 0.7;
+  opacity: 0.3;
 }
