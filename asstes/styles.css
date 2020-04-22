@@ -93,6 +93,15 @@ header img {
   border: 10px solid var(--bg-color);
   border-radius: 50%;
 }
+@media (max-width: 799px) {
+  .header-content {
+    display: block;
+    width: auto;
+  }
+  .header-content div:nth-child(2) {
+    text-align: center;
+  }
+}
 
 main {
   max-width: 800px;
