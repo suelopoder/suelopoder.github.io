@@ -1,10 +1,19 @@
-* {
+:root {
   --primary-color: black;
   --bg-color: rgb(220, 220, 220);
   --bg-color-light: rgb(240, 240, 240);
-  --link-color-light: rgb(143, 32, 32);
-  --primary-font: 'Roboto', sans-serif;
+  --link-color: rgb(143, 32, 32);
+  --link-color-active: #c52c2c;
+  
+  --primary-font: 'Inter', sans-serif;
   --secondary-font: 'EB Garamond', serif;
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+html {
+  background: white;
 }
 
 body, ul, li, ol {
@@ -12,7 +21,7 @@ body, ul, li, ol {
   padding: 0;
 }
 
-ul, ol {
+main ul, main ol {
   display: flex;
   flex-flow: row wrap;
   width: 90%;
@@ -24,15 +33,24 @@ li {
   padding-top: 0.5rem;
 }
 
-ul > li {
+main ul > li { 
   line-height: 1.3rem;
   flex: 1 1 auto;
   flex-wrap: wrap;
 }
 
+a, a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--link-color-active);
+}
+
 h2 {
   border-bottom: 2px solid;
   font-family: var(--secondary-font);
+  font-size: 2rem;;
   padding-bottom: 5px;
   padding-left: 5px;
 }
@@ -44,23 +62,51 @@ h2 a:hover {
 }
 
 body {
-  --link-color: var(--link-color-light);
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100vh;
   color: var(--primary-color);
-  background: var(--bg-color-light);
+  background: var(--bg-color);
   font-size: 16px;
   font-family: var(--primary-font);
+
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "nav main";
+  grid-template-columns: 200px 1fr;
+}
+@media (max-width: 799px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    height: initial;
+  }
 }
 
-a, a:visited {
-  color: var(--link-color);
-  text-decoration: none;
+nav {
+  grid-area: nav;
+  padding: 2rem 1rem;
+}
+
+main {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  grid-area: main;
+}
+@media (max-width: 799px) {
+  main {
+    overflow-y: auto;
+  }
 }
 
 header {
+  grid-area: header;
   font-weight: bold;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background: var(--bg-color);
+  background: var(--bg-color-light);
   clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
 }
 .header-content {
@@ -90,7 +136,7 @@ header h2 {
 }
 header img {
   height: 9rem;
-  border: 10px solid var(--bg-color-light);
+  border: 10px solid var(--bg-color);
   border-radius: 50%;
 }
 @media (max-width: 799px) {
@@ -103,17 +149,12 @@ header img {
   }
 }
 
-main {
-  max-width: 800px;
-  margin: 0 auto;
+section {
+  scroll-snap-align: top;
 }
 
 article, section {
-  padding: 1rem;
-}
-
-#main-data {
-  font-size: 1.5rem;
+  padding: 0 1rem;
 }
 
 #reach-me ul {

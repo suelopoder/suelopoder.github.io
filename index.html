@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Diego Sisto curriculum vitae">
     <title>Diego Sisto</title>
-    <link href="./asstes/styles.css" rel="stylesheet">
+    <link href="./assets/styles.css" rel="stylesheet">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto&display=swap" rel="stylesheet">
-    <script src="./asstes/app.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <script src="./assets/app.js" defer></script>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script type="module">
+      function getExpYears() {
+        return new Date().getFullYear() - 2007
+      }
+      document.getElementById('experience').innerText = getExpYears()
+    </script>
   </head>
   <body>
     <header>
       <div class="header-content">
         <div>
-          <img src="./asstes/me.jpeg" alt="Diego Sisto pic">
+          <img src="./assets/me.jpeg" alt="Diego Sisto profile pic">
         </div>
         <div>
           <h1>Diego Sisto</h1>
@@ -24,19 +32,32 @@
       </div>
     </header>
 
+    <nav>
+      <ul>
+        <li><a href="#intro"><b>📝</b> Introduction</a></li>
+        <li><a href="#tech"><b>🦾</b> Technology</a></li>
+        <li><a href="#job-history"><b>🧑‍💻</b> Job history</a></li>
+        <li><a href="#education"><b>📗</b> Education</a></li>
+        <li><a href="#reach-me"><b>👋</b> How to reach me</a></li>
+        <li><a href="#quotes"><b>⍘</b> Quotes</a></li>
+      </ul>
+    </nav>
+
     <main>
-      <section id="main-data">
-        <p>My name is Diego, and I have a <strong>passion for software development</strong>. I am from Argentina, the land of <a href="https://en.wikipedia.org/wiki/Mate_(drink)">🧉</a> and <a href="./asstes/messi.jpg">Messi</a>.</p>
-        <p>I am a senior developer with over 12 years of experience in software development. I have worked with many technologies, but now I find myself comfortable around Javascript and frontend development.</p>
-        <p>I have experience as a team leader. I ❤️ building self organised teams with members that collaborate with each other.</p>
-        <p>I have been working remotely for some years now. But I love meeting people in person.</p>
-        <p>When I am in doubt I say I don't know. But I learn and get the answer.</p>
+      <section id="intro">
+        <h2><a href="#intro">Introduction</a></h2>
+        <p>Hi! I am Diego, Helena's father, Jimena's husband. I am from Argentina, the land of <a href="https://en.wikipedia.org/wiki/Mate_(drink)">🧉</a> and <a href="./assets/messi.jpg">Messi</a>.</p>
+        <p>I have <strong>passion for software development</strong>. I am a senior developer with <span id="experience">-</span> years of experience in software development. I have worked with multiple tech stacks, but now I find myself comfortable around Javascript and frontend development.</p>
+        <p>I have experience as a team leader. I ♥️ building self organised teams with <a hre="https://www.oberlo.com/blog/7-habits-of-highly-effective-people-by-stephen-covey-summary#:~:text=Interdependence%20is%20a%20more%20mature,laid%20out%20in%20the%20book.">interdependant</a> members that collaborate with each other.</p>
+        <p>I have been working remotely for some years now. But I love meeting people face to face.</p>
+        <p>When in doubt I'll say I don't know, but will do the homework and get the answer.</p>
       </section>
 
       <section id="tech">
-        <h2><a href="#tech">Technologies</a></h2>
+        <h2><a href="#tech">Technology</a></h2>
+        
         <p>
-          Some technologies I've used for quick reference
+          Some tech stacks I've used for quick reference
         </p>
         <ul>
           <li><a href="https://reactjs.org/">React.js</a></li>
@@ -82,6 +103,7 @@
           <li><a href="https://analytics.google.com/">Google analytics</a></li>
           <li><a href="https://sentry.io/">sentry.io</a></li>
         </ul>
+
         <p>Some topics I am really into. My degree of expertise varies between them but I recognize their importance.</p>
         <ul>
           <li>Performance</li>
@@ -101,6 +123,13 @@
           <li>Lean startup</li>
           <li>Systems architecture</li>
         </ul>
+        
+        <p>Sometimes I build stuff to get my head around them and really learn them.</p>
+        <ul>
+          <li><a href="https://github.com/suelopoder/rust-wasm-test">Rust and WASM <small>Check the video with results!</small></a></li>
+          <li>This page tests web features like responsiveness (change page width) and scroll snap</li>
+          <li><a href="https://github.com/suelopoder/web-components-playground/blob/main/shadow-dom.html">Here</a> I play around with web components and the shadow DOM</li>
+        </ul>
       </section>
 
       <section id="job-history">
@@ -108,19 +137,25 @@
         <p>I added my most relevant jobs. For a full history, check out <a href="https://www.linkedin.com/in/diego-sisto-a2674021/">my LinkedIn profile</a>.</p>
         <ul>
           <li>
-            <h3><img src="./asstes/xapo.svg" alt="Xapo logo"></h3>
-            <p>Xapo is a bitcoin friendly fintech company. I worked there for a little more than 5 years.</p>
+            <h3>
+              <img src="./assets/blockchain.svg" alt="Blockchain.com logo" />
+            </h3>
+            <p>Blockchain.com is one of the leading crypto companies out there. My focus there was on the <a href="https://exchange.blockchain.com/trade">exchange web app</a>.</p>
+          </li>
+          <li>
+            <h3><img src="./assets/xapo.svg" alt="Xapo logo"></h3>
+            <p>Xapo is a bitcoin friendly fintech company. I worked there for a little over 5 years.</p>
             <p>I joined as a web team leader when the company was still small and stayed there until it was about 250 people.</p>
             <p>While young the company had a legacy webapp with some technical issues. I was assigned that app. My first steps were to improve it's release process and how to test it. Along with a team of 2 remote devs we implemented great features like the first debit card program. I learned the importance of deadlines and suffered from some urgent priorities shifts.</p>
-            <p>Later on the company grew and we started hiring. The team grew from 2 to 8 devs, all of them remote with different time zones. By then we could finally invest in a new modern web application. <a href="https://web.xapo.com">Xapo webapp</a> <small>(Sorry, account needed)</small> is the biggest most challenging project I have worked on. It is a single page app built with React, redux and redux-saga. It uses a large set of techs which include: Docker, Firebase, AWS, Google analytics, sentry.io and many many more. It was not the technology but the amount of features and constant iteration which made it very complex.</p>
+            <p>Later on the company grew and we started hiring. The team grew from 2 to 8 devs, all of them remote with different time zones. By then we could finally invest in a new modern web application. <a href="https://web.xapo.com">Xapo webapp</a> <small>(Sorry, discontinued now)</small> is the biggest most challenging project I have worked on. It is a single page app built with React, redux and redux-saga. It uses a large set of techs which include: Docker, Firebase, AWS, Google analytics, sentry.io and many many more. It was not the technology but the amount of features and constant iteration which made it very complex.</p>
             <p>We had 2 weeks sprints with demos and releases at the end of each one. I participated in the definition of release and development processes.</p>
-            <p>I ended up handling multiple projects with different needs, technologies and audiences. From public legal pages aspects to internal tools for Xapo employees.</p>
+            <p>I ended up handling multiple projects with different needs, technology and audiences. From public legal pages aspects to internal tools for Xapo employees.</p>
             <p>I left the company because most web projects were being shut down. I have a great relationship with most of the company including everyone on my team, my bosses and the CEO.</p>
             <p>As a manager I tried to promote collaboration and allow mistakes to be made. Every standard was up for debate, once settled it went on stone for a while. Team members were empowered to propose a change for what they didn't like. I pushed some company wide tech exchanges and some team wide ones like Fridays "tech talk"</p>
             <p>Xapo was a great place for me to exchange experiences due to the diversity of roles people had in the company. I learned from debit and credit cards, compliance, design, trading, working with third parties, law and banking institutions.</p>
           </li>
           <li>
-            <h3><img src="./asstes/kinetica.webp" alt="Kinetica Solutions logo"></h3>
+            <h3><img src="./assets/kinetica.webp" alt="Kinetica Solutions logo"></h3>
             <p>Kinetica Solutions was a software consulting firm.</p>
             <p>I worked there for a little more than 4 years.</p>
             <p>Kinetica was where I formed myself as a senior developer. I was lucky to work with great developers. Company founders were strong believers in quality and agile methodologies.</p>
@@ -145,33 +180,36 @@
       </section>
 
       <section id="reach-me">
-        <h2><a href="#reach-me">How to reach me?</a></h2>
+        <h2><a href="#reach-me">How to reach me</a></h2>
         <ul>
           <li class="mail">
-            <img src="./asstes/mail.ico" alt="Mail:">
+            <img src="./assets/mail.ico" alt="Mail:">
             diegosisto84 <strong>at</strong> gmail <strong>dot</strong> com
           </li>
           <li class="twitter">
-            <img src="./asstes/twitter.ico" alt="twitter handle:">
+            <img src="./assets/twitter.ico" alt="twitter handle:">
             <a href="https://github.com/suelopoder">@suelopoder</a>
           </li>
           <li class="linkedin">
-            <img src="./asstes/linkedin.ico" alt="linkedin profile:">
+            <img src="./assets/linkedin.ico" alt="linkedin profile:">
             <a href="https://www.linkedin.com/in/diego-sisto-a2674021/">Diego Sisto</a>
           </li>
           <li class="github">
-            <img src="./asstes/github.png" alt="github profile:">
+            <img src="./assets/github.png" alt="github profile:">
             <a href="https://github.com/suelopoder">suelopoder</a>
           </li>
         </ul>
       </section>
 
       <section id="quotes">
-        <h2>Quotes</h2>
+        <h2><a href="#quotes">Quotes</a></h2>
         <p>Some quotes that I align with my ideas.</p>
         <div>
           <p><q>Responsibility is a unique concept... You may share it with others, but your portion is not diminished. You may delegate it, but it is still with you...</q> Hyman Rickover</p>
           <p><q>Blame nobody, expect nothing, do something</q> Bill Parcells, but heard it first from Ted Rogers </p>
+          <p><q>If I really want to improve my situation, I can work on the one thing over which I have control - myself.</q> Stephen Covey, The 7 Habits of Highly Effective People</p>
+          <p><q>Two people can see the same thing, disagree, and yet both be right. It's not logical; it's psychological.</q> Stephen Covey, The 7 Habits of Highly Effective People</p>
+          <p><q>if you can get 1 percent better each day for one year, you’ll end up thirty-seven times better by the time you’re done.</q> James Clear, Attomic Habits</p>
           <p><q>Individuals and interactions over processes and tools</q> <a href="https://agilemanifesto.org/">Agile Manifesto</a></p>
           <p><q>Premature optimization is the root of all evil.</q> Donald Knuth</p>
           <p><q>Be the change you wish to see in the world.</q> Mohandas Gandhi</p>
@@ -179,7 +217,7 @@
           <p><q>Write tests. Not too many. Mostly integration.</q> <a href="https://twitter.com/rauchg/status/807626710350839808">Guillermo Rauch</a></p>
           <p><q>No practice, no learning.</q> <a href="https://twitter.com/leomicheloni">Leonardo Micheloni</a></p>
           <p><q>Something simple today may be better than something great tomorrow.</q> Me</p>
-          <p><q>Estimations are an educated guess, but sprint goals are compromises.</q> Me</p>
+          <p><q>Estimations are an educated guess, sprint goals are compromises.</q> Me</p>
           <canvas id="quote-image" width="200" height="120"></canvas>
         </div>
       </section>
