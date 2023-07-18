@@ -6,7 +6,6 @@
   --link-color-active: #c52c2c;
   
   --primary-font: 'Inter', sans-serif;
-  --secondary-font: 'EB Garamond', serif;
 }
 @supports (font-variation-settings: normal) {
   :root { font-family: 'Inter var', sans-serif; }
@@ -49,8 +48,7 @@ a:hover {
 
 h2 {
   border-bottom: 2px solid;
-  font-family: var(--secondary-font);
-  font-size: 2rem;;
+  font-size: 2rem;
   padding-bottom: 5px;
   padding-left: 5px;
 }
@@ -74,7 +72,7 @@ body {
   grid-template-areas: 
     "header header"
     "nav main";
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: auto 1fr;
 }
 @media (max-width: 799px) {
   body {
@@ -86,7 +84,34 @@ body {
 
 nav {
   grid-area: nav;
-  padding: 2rem 1rem;
+  padding: 2rem 0.5rem;
+}
+nav li { padding: 0.5rem 0 0 0; }
+nav a {
+  display: flex;
+  gap: 0.5rem;
+}
+nav a b {
+  width: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 799px) {
+  nav ul {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    max-width: 18rem;
+    margin: auto;
+  }
+  nav a:hover {
+    background: var(--bg-color-light);
+    border-radius: 0.75rem;
+  }
+  nav a b { width: 2.5rem; }
+  nav a span { display: none; }
 }
 
 main {
@@ -131,11 +156,14 @@ header h1 {
   font-size: 5rem;
 }
 header h2 {
-  font-size: 3rem;;
+  font-size: 2rem;
   text-decoration: none;
+  font-weight: normal;
 }
 header img {
   height: 9rem;
+  width: 9rem;
+  aspect-ratio: 1/1;
   border: 10px solid var(--bg-color);
   border-radius: 50%;
 }
